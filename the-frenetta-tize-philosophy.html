@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Frenetta-tize™ Philosophy | Frenetta Tate Global</title>
+<meta name="description" content="Frenetta-tize™ is not a service. It is a philosophy of transformation — the way ideas, leadership, and organizations are elevated into their highest practical expression.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Jost:wght@300;400;500&family=Montserrat:wght@500;600&display=swap" rel="stylesheet">
+<style>
+
+  :root{
+    --charcoal:#1F1F1F;
+    --ivory:#F5F2ED;
+    --gold:#C2A46D;
+    --taupe:#D9D4CC;
+    --olive:#4A5A4D;
+    --gold-soft: rgba(194,164,109,0.35);
+    --olive-soft: rgba(74,90,77,0.12);
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+
+  body{
+    margin:0;
+    background:var(--ivory);
+    color:var(--charcoal);
+    font-family:'Jost', sans-serif;
+    font-weight:300;
+    line-height:1.75;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  a{color:inherit;}
+
+  .eyebrow{
+    font-family:'Montserrat', sans-serif;
+    font-weight:600;
+    font-size:12px;
+    letter-spacing:0.22em;
+    text-transform:uppercase;
+    color:var(--gold);
+  }
+
+  .eyebrow.dark{ color:var(--gold); }
+  .eyebrow.on-light{ color:var(--olive); }
+
+  .container{
+    max-width:760px;
+    margin:0 auto;
+    padding:0 28px;
+  }
+
+  .wide-container{
+    max-width:920px;
+    margin:0 auto;
+    padding:0 28px;
+  }
+
+  /* ---------- HERO ---------- */
+
+  .hero{
+    position:relative;
+    background:var(--charcoal);
+    color:var(--ivory);
+    padding:140px 0 120px;
+    overflow:hidden;
+    text-align:center;
+  }
+
+  .hero-wash{
+    position:absolute;
+    inset:0;
+    pointer-events:none;
+    opacity:0.5;
+  }
+
+  .hero .eyebrow{ margin-bottom:26px; }
+
+  .hero h1{
+    font-family:'Cormorant Garamond', serif;
+    font-style:italic;
+    font-weight:500;
+    font-size:clamp(56px, 9vw, 108px);
+    line-height:1.02;
+    margin:0 0 8px;
+    letter-spacing:0.005em;
+  }
+
+  .hero .tm{
+    font-size:0.38em;
+    vertical-align:super;
+    font-style:normal;
+    opacity:0.85;
+  }
+
+  .hero .subline{
+    font-family:'Cormorant Garamond', serif;
+    font-style:italic;
+    font-weight:400;
+    font-size:clamp(20px, 2.6vw, 27px);
+    color:var(--gold);
+    margin:18px 0 40px;
+  }
+
+  .hero p.lead{
+    max-width:560px;
+    margin:0 auto 34px;
+    font-size:18px;
+    font-weight:300;
+    color:rgba(245,242,237,0.88);
+  }
+
+  .hero .thesis{
+    max-width:520px;
+    margin:0 auto 44px;
+    font-family:'Cormorant Garamond', serif;
+    font-style:italic;
+    font-size:22px;
+    line-height:1.5;
+    color:var(--ivory);
+  }
+
+  .hero .thesis strong{
+    font-style:normal;
+    font-weight:600;
+    color:var(--gold);
+  }
+
+  .btn{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    font-family:'Montserrat', sans-serif;
+    font-weight:600;
+    font-size:12px;
+    letter-spacing:0.16em;
+    text-transform:uppercase;
+    color:var(--charcoal);
+    background:var(--gold);
+    padding:17px 34px;
+    border-radius:2px;
+    text-decoration:none;
+    border:1px solid var(--gold);
+    transition:background 0.25s ease, color 0.25s ease, transform 0.2s ease;
+  }
+
+  .btn:hover{
+    background:transparent;
+    color:var(--gold);
+    transform:translateY(-1px);
+  }
+
+  .btn:focus-visible{
+    outline:2px solid var(--gold);
+    outline-offset:4px;
+  }
+
+  .btn svg{ width:14px; height:14px; transition:transform 0.25s ease; }
+  .btn:hover svg{ transform:translateX(3px); }
+
+  /* ---------- SECTION SCAFFOLDING ---------- */
+
+  section{ padding:104px 0; }
+  section.tight{ padding:88px 0; }
+
+  .bg-ivory{ background:var(--ivory); }
+  .bg-taupe{ background:var(--taupe); }
+  .bg-olive{ background:var(--olive); color:var(--ivory); }
+  .bg-charcoal{ background:var(--charcoal); color:var(--ivory); }
+
+  h2.section-title{
+    font-family:'Cormorant Garamond', serif;
+    font-weight:500;
+    font-size:clamp(30px, 4vw, 42px);
+    line-height:1.15;
+    margin:14px 0 30px;
+  }
+
+  .rule{
+    width:56px;
+    height:2px;
+    background:var(--gold);
+    border:none;
+    margin:0 0 22px;
+  }
+
+  .rule.center{ margin:0 auto 22px; }
+
+  h2.section-title.one-line{
+    white-space:nowrap;
+    font-size:clamp(19px, 4.2vw, 42px);
+  }
+
+  p{ margin:0 0 20px; font-size:17px; }
+  section p:last-child{ margin-bottom:0; }
+
+  /* ---------- LEXICON CARD (signature element) ---------- */
+
+  .lexicon{
+    border-left:2px solid var(--gold);
+    padding-left:32px;
+    margin:0 0 8px;
+  }
+
+  .lexicon .pos-row{
+    display:flex;
+    align-items:baseline;
+    gap:14px;
+    flex-wrap:wrap;
+    margin-bottom:6px;
+  }
+
+  .lexicon .pos{
+    font-family:'Montserrat', sans-serif;
+    font-weight:600;
+    font-size:11px;
+    letter-spacing:0.2em;
+    text-transform:uppercase;
+    color:var(--olive);
+  }
+
+  .lexicon .phonetic{
+    font-family:'Cormorant Garamond', serif;
+    font-style:italic;
+    font-size:16px;
+    color:var(--gold);
+  }
+
+  .lexicon h3{
+    font-family:'Cormorant Garamond', serif;
+    font-style:italic;
+    font-weight:600;
+    font-size:clamp(34px, 5vw, 48px);
+    margin:0 0 18px;
+    line-height:1.1;
+  }
+
+  .lexicon h3 .tm{
+    font-size:0.4em;
+    vertical-align:super;
+    font-style:normal;
+  }
+
+  .lexicon .definition{ font-size:17.5px; }
+
+  /* ---------- ORIGIN ---------- */
+
+  .origin blockquote{
+    font-family:'Cormorant Garamond', serif;
+    font-style:italic;
+    font-size:clamp(24px, 3.4vw, 32px);
+    line-height:1.4;
+    color:var(--olive);
+    margin:36px 0;
+    padding:0;
+    border:none;
+  }
+
+  .origin .triggers{
+    font-size:16px;
+    color:#4a4a48;
+  }
+
+  .origin .triggers div{ margin-bottom:6px; }
+
+  /* ---------- TAG GRID (what gets frenetta-tized) ---------- */
+
+  .tag-grid{
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+    margin-top:28px;
+  }
+
+  .tag{
+    font-family:'Jost', sans-serif;
+    font-weight:400;
+    font-size:15.5px;
+    color:var(--charcoal);
+    background:rgba(245,242,237,0.7);
+    border:1px solid var(--gold-soft);
+    padding:11px 20px;
+    border-radius:999px;
+  }
+
+  .tag-grid + p.closing-line{
+    margin-top:34px;
+    font-family:'Cormorant Garamond', serif;
+    font-style:italic;
+    font-size:22px;
+    color:var(--olive);
+  }
+
+  /* ---------- OUTCOMES LIST ---------- */
+
+  .outcomes{
+    list-style:none;
+    padding:0;
+    margin:28px 0 0;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:14px 32px;
+  }
+
+  .outcomes li{
+    display:flex;
+    align-items:baseline;
+    gap:12px;
+    font-size:17px;
+    font-weight:300;
+  }
+
+  .outcomes li::before{
+    content:"";
+    width:6px;
+    height:6px;
+    border-radius:50%;
+    background:var(--gold);
+    flex-shrink:0;
+    transform:translateY(-4px);
+  }
+
+  .outcomes-closing{
+    margin-top:36px;
+    font-family:'Cormorant Garamond', serif;
+    font-style:italic;
+    font-size:20px;
+    color:rgba(245,242,237,0.9);
+  }
+
+  /* ---------- PULL QUOTE (the difference) ---------- */
+
+  .pullquote{
+    text-align:center;
+    padding:96px 0;
+  }
+
+  .pullquote p{
+    font-family:'Cormorant Garamond', serif;
+    font-style:italic;
+    font-weight:500;
+    font-size:clamp(26px, 4vw, 38px);
+    line-height:1.4;
+    max-width:680px;
+    margin:0 auto;
+  }
+
+  .pullquote .and{
+    display:block;
+    color:var(--gold);
+    margin:10px 0;
+    font-size:0.7em;
+  }
+
+  /* ---------- PHILOSOPHY BEHIND EVERYTHING ---------- */
+
+  .expressions{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px 0;
+    font-family:'Jost', sans-serif;
+    font-size:17px;
+    color:var(--charcoal);
+    margin:26px 0 40px;
+  }
+
+  .expressions span{
+    padding:0 18px 0 0;
+    position:relative;
+  }
+
+  .expressions span:not(:last-child)::after{
+    content:"·";
+    position:absolute;
+    right:6px;
+    color:var(--gold);
+  }
+
+  .single-question{
+    text-align:center;
+    font-family:'Cormorant Garamond', serif;
+    font-style:italic;
+    font-weight:600;
+    font-size:clamp(30px, 5vw, 46px);
+    margin:20px 0;
+  }
+
+  /* ---------- CLOSING ---------- */
+
+  .closing{
+    text-align:center;
+  }
+
+  .closing p{
+    font-size:18px;
+  }
+
+  .closing .way-list{
+    font-family:'Cormorant Garamond', serif;
+    font-style:italic;
+    font-size:24px;
+    color:var(--olive);
+    margin:30px 0;
+    line-height:1.7;
+  }
+
+  .brand-promise{
+    margin-top:56px;
+    padding-top:40px;
+    border-top:1px solid var(--gold-soft);
+  }
+
+  .brand-promise p{
+    font-family:'Cormorant Garamond', serif;
+    font-style:italic;
+    font-weight:500;
+    font-size:clamp(16px, 2.9vw, 28px);
+    color:var(--charcoal);
+    max-width:none;
+    margin:0 auto;
+    white-space:nowrap;
+  }
+
+  /* ---------- FOOTER ---------- */
+
+  footer{
+    background:var(--charcoal);
+    color:rgba(245,242,237,0.65);
+    padding:64px 0 40px;
+    text-align:center;
+  }
+
+  footer .footer-mark{
+    font-family:'Cormorant Garamond', serif;
+    font-style:italic;
+    font-size:22px;
+    color:var(--gold);
+    margin-bottom:24px;
+  }
+
+  footer .ip-notice{
+    font-size:13px;
+    line-height:1.8;
+    max-width:640px;
+    margin:0 auto 26px;
+    color:rgba(245,242,237,0.55);
+  }
+
+  footer .copyright{
+    font-family:'Montserrat', sans-serif;
+    font-size:11px;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    color:rgba(245,242,237,0.4);
+  }
+
+  /* ---------- REVEAL ANIMATION ---------- */
+
+  .reveal{
+    opacity:0;
+    transform:translateY(18px);
+    transition:opacity 0.8s ease, transform 0.8s ease;
+  }
+  .reveal.is-visible{
+    opacity:1;
+    transform:translateY(0);
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    .reveal{ opacity:1; transform:none; transition:none; }
+    html{ scroll-behavior:auto; }
+  }
+
+  /* ---------- RESPONSIVE ---------- */
+
+  @media (max-width:640px){
+    .hero{ padding:108px 0 88px; }
+    section{ padding:76px 0; }
+    section.tight{ padding:64px 0; }
+    .lexicon{ padding-left:20px; }
+    .outcomes{ grid-template-columns:1fr; }
+    .pullquote{ padding:72px 0; }
+    .container, .wide-container{ padding:0 22px; }
+  }
+
+  @media (max-width:430px){
+    h2.section-title.one-line{
+      white-space:normal;
+      font-size:clamp(24px, 6vw, 34px);
+    }
+    .brand-promise p{
+      white-space:normal;
+      font-size:20px;
+      max-width:300px;
+    }
+  }
+
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <svg class="hero-wash" viewBox="0 0 1200 700" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <ellipse cx="220" cy="120" rx="360" ry="220" fill="#4A5A4D" opacity="0.14"/>
+    <ellipse cx="980" cy="560" rx="420" ry="260" fill="#C2A46D" opacity="0.08"/>
+  </svg>
+  <div class="container" style="position:relative;">
+    <p class="eyebrow">A philosophy, not a service</p>
+    <h1>Frenetta&#8209;tize<span class="tm">™</span></h1>
+    <p class="subline">More than a word.<br>A philosophy of transformation.</p>
+    <p class="lead">We don't simply improve what exists. We uncover what is missing, create alignment where there is friction, and elevate ideas, systems, leadership, and experiences into their highest practical expression.</p>
+    <p class="thesis">Some people solve problems.<br>We reveal the problem beneath the problem.<br>Then we <strong>Frenetta&#8209;tize</strong>&#8202;™ the solution.</p>
+    <a class="btn" href="#meaning">
+      Discover the philosophy
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+    </a>
+  </div>
+</header>
+
+<section id="meaning" class="bg-ivory reveal">
+  <div class="container">
+    <p class="eyebrow on-light">What does it mean?</p>
+    <div class="lexicon">
+      <div class="pos-row">
+        <span class="pos">Verb</span>
+        <span class="phonetic">[freh&#8209;NET&#8209;ah&#8209;tyz]</span>
+      </div>
+      <h3>Frenetta&#8209;tize<span class="tm">™</span></h3>
+      <p class="definition">To thoughtfully transform an idea, system, process, experience, or organization into its highest practical expression through intentional refinement, strategic clarity, and purposeful design.</p>
+      <p class="definition">Frenetta&#8209;tizing is not about adding more. It is about recognizing what others overlook, uncovering what is missing, and creating alignment that strengthens execution, elevates experiences, and creates results that feel intentional, sustainable, and remarkably effective.</p>
+    </div>
+  </div>
+</section>
+
+<section class="bg-taupe origin reveal">
+  <div class="container">
+    <p class="eyebrow on-light">It started long before it had a name</p>
+    <h2 class="section-title">A phrase that named itself.</h2>
+    <p>The term "Frenetta&#8209;tize" was never created in a marketing meeting. It emerged organically over years of professional leadership.</p>
+    <div class="triggers">
+      <div>Whenever a project needed more clarity&#8230;</div>
+      <div>Whenever a process needed stronger structure&#8230;</div>
+      <div>Whenever an experience needed to feel more intentional&#8230;</div>
+      <div>Whenever something was functional but not exceptional&#8230;</div>
+    </div>
+    <blockquote>"Let Frenetta&#8209;tize it."</blockquote>
+    <p>Over time, that phrase came to represent more than refinement. It became a recognizable way of thinking. Today, it defines the philosophy behind every framework, engagement, product, and solution developed by Frenetta Tate Global.</p>
+  </div>
+</section>
+
+<section class="bg-ivory reveal">
+  <div class="container">
+    <p class="eyebrow on-light">What gets Frenetta&#8209;tized?</p>
+    <h2 class="section-title">Almost anything that influences people, performance, or experience.</h2>
+    <div class="tag-grid">
+      <span class="tag">Organizations</span>
+      <span class="tag">Leadership</span>
+      <span class="tag">Employee experience</span>
+      <span class="tag">Business operations</span>
+      <span class="tag">Communication</span>
+      <span class="tag">Processes</span>
+      <span class="tag">Decision&#8209;making</span>
+      <span class="tag">Customer experiences</span>
+      <span class="tag">AI implementation</span>
+      <span class="tag">Digital products</span>
+      <span class="tag">Strategic initiatives</span>
+    </div>
+    <p class="closing-line">If it affects people&#8230; it can be Frenetta&#8209;tized&#8202;™.</p>
+  </div>
+</section>
+
+<section class="bg-olive reveal">
+  <div class="container">
+    <p class="eyebrow" style="color:var(--gold);">What changes?</p>
+    <h2 class="section-title">You won't simply notice more organization. You'll notice&#8230;</h2>
+    <ul class="outcomes">
+      <li>Greater clarity</li>
+      <li>Better alignment</li>
+      <li>More intentional experiences</li>
+      <li>Stronger execution</li>
+      <li>Consistent leadership</li>
+      <li>Improved trust</li>
+      <li>Less friction</li>
+      <li>Better decisions</li>
+      <li>Sustainable systems</li>
+      <li>Results that endure</li>
+    </ul>
+    <p class="outcomes-closing">The difference is rarely louder. It is almost always clearer.</p>
+  </div>
+</section>
+
+<section class="bg-ivory reveal">
+  <div class="container">
+    <p class="eyebrow on-light">The Frenetta&#8209;tive™ standard</p>
+    <div class="lexicon">
+      <div class="pos-row">
+        <span class="pos">Adjective</span>
+        <span class="phonetic">[freh&#8209;NET&#8209;ah&#8209;tiv]</span>
+      </div>
+      <h3>Frenetta&#8209;tive<span class="tm">™</span></h3>
+      <p class="definition">Describing work, leadership, systems, or experiences that demonstrate intentional refinement, strategic excellence, and thoughtful execution.</p>
+      <p class="definition">A Frenetta&#8209;tive organization feels different. Its systems are aligned. Its communication is clear. Its leadership is intentional. Its experiences are consistent. Its culture reflects purpose rather than accident. People may not immediately know why. They simply know something feels different.</p>
+    </div>
+  </div>
+</section>
+
+<section class="bg-taupe reveal">
+  <div class="container">
+    <p class="eyebrow on-light">The visible outcome</p>
+    <div class="lexicon">
+      <div class="pos-row">
+        <span class="pos">Noun</span>
+        <span class="phonetic">[freh&#8209;net&#8209;ah&#8209;ti&#8209;ZAY&#8209;shun]</span>
+      </div>
+      <h3>Frenetta&#8209;tization<span class="tm">™</span></h3>
+      <p class="definition">The transformational outcome produced through the application of the Frenetta&#8209;tize™ philosophy.</p>
+      <p class="definition">Frenetta&#8209;tization is visible when ideas become executable&#8230; when strategy becomes operational&#8230; when experiences become memorable&#8230; and when organizations begin functioning the way they were always intended to.</p>
+    </div>
+  </div>
+</section>
+
+<section class="bg-charcoal pullquote reveal">
+  <div class="container">
+    <p>Everyone can improve something.<span class="and">and</span>Few people possess the ability to recognize what is missing before everyone else does.</p>
+  </div>
+</section>
+
+<section class="bg-ivory reveal">
+  <div class="container">
+    <p class="eyebrow on-light">The philosophy behind everything we build</p>
+    <h2 class="section-title">Not separate ideas. One philosophy, expressed differently each time.</h2>
+    <div class="expressions">
+      <span>Every framework</span>
+      <span>Every consulting engagement</span>
+      <span>Every leadership tool</span>
+      <span>Every digital product</span>
+      <span>Every organizational assessment</span>
+      <span>Every AI solution</span>
+      <span>Every keynote</span>
+      <span>Every experience</span>
+    </div>
+    <p>Everything begins by asking a single question.</p>
+    <p class="single-question">"What is missing?"</p>
+    <p style="text-align:center;">Everything that follows is the work of Frenetta&#8209;tizing&#8202;™.</p>
+  </div>
+</section>
+
+<section class="bg-taupe closing reveal">
+  <div class="container">
+    <p class="eyebrow on-light" style="text-align:center;">A living philosophy</p>
+    <h2 class="section-title one-line" style="text-align:center;">Not a checklist. Not a formula. Not a trend.</h2>
+    <p class="way-list">
+      A way of seeing.<br>
+      A way of thinking.<br>
+      A way of leading.
+    </p>
+    <p>And ultimately, a way of creating organizations, experiences, and solutions that are remembered long after the work is complete.</p>
+    <div class="brand-promise">
+      <p>"We don't just improve what exists. We reveal what is possible."</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wide-container">
+    <p class="footer-mark">Frenetta&#8209;tize<span class="tm">™</span></p>
+    <p class="ip-notice">Frenetta&#8209;tize™, Frenetta&#8209;tive™, and Frenetta&#8209;tization™ are proprietary intellectual property concepts and brand identifiers developed by Frenetta Tate. While the philosophy and intended outcomes may be described publicly, the complete methodology, frameworks, processes, models, and applications remain proprietary and are reserved for authorized consulting engagements, educational programs, publications, and licensed offerings.</p>
+    <p class="copyright">&copy; Frenetta Tate Global LLC. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+  (function(){
+    var els = document.querySelectorAll('.reveal');
+    if(!('IntersectionObserver' in window)){
+      els.forEach(function(el){ el.classList.add('is-visible'); });
+      return;
+    }
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){
+          entry.target.classList.add('is-visible');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    els.forEach(function(el){ io.observe(el); });
+  })();
+</script>
+
+</body>
+</html>
